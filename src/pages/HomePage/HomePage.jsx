@@ -1,3 +1,9 @@
+import { Container } from "@ui/Container/Container";
+import { HomeModule } from "@modules/HomeModule/HomeModule";
 export const HomePage = () => {
-    return <div>homepage</div>;
+    return (
+        <Container>
+            <HomeModule />
+        </Container>
+    );
 };

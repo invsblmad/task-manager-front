@@ -1,0 +1,116 @@
+.menuContainer {
+    position: fixed;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    margin-top: -50px;
+
+    .popupMenu {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: var(--brand-primary);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 200px;
+        height: calc(100% - 50px);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        animation: fadeSlideIn 0.3s ease forwards;
+
+        .menuItem {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .icon {
+            font-size: 1rem;
+            color: var(--white);
+        }
+    }
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: var(--brand-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1100;
+
+    .leftSection,
+    .rightSection {
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .leftSection {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .title {
+            margin: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+        .menuButton {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--white);
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--grey-grey5);
+            }
+        }
+    }
+
+    .rightSection {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+
+        .userIcon {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+    }
+}
+
+.open {
+    width: 220px;
+}
+
+.closed {
+    width: 60px;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

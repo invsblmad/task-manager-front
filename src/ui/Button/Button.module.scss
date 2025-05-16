@@ -52,3 +52,21 @@
         }
     }
 }
+.text {
+    background: none;
+    border: none;
+    padding: 10px;
+    color: var(--white);
+    text-align: left;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: var(--button-activeDarker);
+    }
+}
+.textEmpty {
+    background: none;
+    border: none;
+}

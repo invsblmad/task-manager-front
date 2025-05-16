@@ -3,7 +3,6 @@ import styles from "./Button.module.scss";
 
 export const Button = ({
     text,
-    icon,
     variant,
     disabled,
     onClick,

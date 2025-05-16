@@ -1,0 +1,16 @@
+.homeContainer {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    .title {
+        color: var(--brand-primary);
+    }
+    .searchForm {
+        display: flex;
+        gap: 0.5rem;
+        .searchButton {
+            font-size: 18px;
+        }
+    }
+}
