@@ -1,0 +1,12 @@
+@import "@Mixins";
+.container {
+    gap: 24px;
+    margin: 0 auto;
+    max-width: 1240px;
+    @include Tablet {
+        max-width: 708px;
+    }
+    @include Mobile {
+        max-width: 335px;
+    }
+}
