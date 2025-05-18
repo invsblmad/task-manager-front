@@ -1,0 +1,115 @@
+.welcomeWrapper {
+    position: fixed;
+    inset: 0;
+    background: var(--vanil-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+    .backgroundBalls {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+
+        .ball {
+            position: absolute;
+            background-color: rgba(100, 149, 237, 0.15);
+            border-radius: 50%;
+            filter: blur(10px);
+            animation: moveBall 8s ease-in-out infinite;
+        }
+
+        .ball1 {
+            width: 180px;
+            height: 180px;
+            top: 80%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .ball2 {
+            width: 180px;
+            height: 180px;
+            top: 60%;
+            left: 86%;
+            animation-delay: 0s;
+        }
+    }
+    .backgroundTaskText {
+        position: absolute;
+        top: 75%;
+        left: 18%;
+        transform: translate(-50%, -50%);
+        font-size: 7rem;
+        font-weight: 900;
+        color: var(--blue-blue1);
+        opacity: 0.03;
+        user-select: none;
+        pointer-events: none;
+        animation: floatTask 6s ease-in-out infinite;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .welcome {
+        position: relative;
+        background-color: #ffffff;
+        padding: 40px 50px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-width: 850px;
+        margin-left: 140px;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        z-index: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        .textBlock {
+            flex: 1 1 300px;
+            max-width: 1000px;
+
+            .welcomeText {
+                margin-bottom: 20px;
+            }
+            .startButton {
+                margin-top: 20px;
+            }
+        }
+        .imageWelcome {
+            width: 340px;
+        }
+    }
+}
+
+@keyframes moveBall {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(20px, 20px) scale(1.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes floatTask {
+    0% {
+        transform: translateY(0);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.1;
+    }
+}

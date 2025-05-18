@@ -67,16 +67,37 @@
             text-transform: uppercase;
             color: var(--white);
         }
-        .menuButton {
-            font-size: 24px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: var(--white);
-            transition: color 0.3s ease;
+        .projectDropdown {
+            position: relative;
+            display: inline-block;
+            .menuButton {
+                margin-left: 80px;
+                font-size: 20px;
+            }
+            .projectList {
+                position: absolute;
+                position: absolute;
+                top: 98%;
+                left: 74px;
+                background-color: var(--white);
+                border: 1px solid var(--grey-grey3);
+                border-radius: 6px;
+                box-shadow: 0 4px 10px rgba(149, 149, 149, 0.1);
+                margin-top: 4px;
+                z-index: 1001;
+                min-width: 160px;
+                padding: 6px 0;
+                animation: fadeSlideIn 0.2s ease-out forwards;
 
-            &:hover {
-                color: var(--grey-grey5);
+                .projectItem {
+                    padding: 8px 12px;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease;
+
+                    &:hover {
+                        background-color: var(--grey-grey3);
+                    }
+                }
             }
         }
     }
@@ -93,24 +114,52 @@
             height: 30px;
             object-fit: cover;
         }
-    }
-}
+        .createTaskButton {
+            background-color: var(--brand-secondary-dark);
+            font-weight: bold;
+        }
 
-.open {
-    width: 220px;
-}
+        .searchContainer {
+            display: flex;
+            align-items: center;
+            position: relative;
+            gap: 8px;
+            transition: all 0.3s ease;
+            .searchButton {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 14px;
+                padding: 6px 12px;
+                background-color: transparent;
+                color: var(--white);
+                border: 1px solid transparent;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
 
-.closed {
-    width: 60px;
-}
+                svg {
+                    font-size: 0.85rem;
+                }
 
-@keyframes fadeSlideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+
+            .searchInput {
+                width: 160px;
+                padding: 6px 10px;
+                border-radius: 6px;
+                border: 1px solid var(--grey-grey3);
+                outline: none;
+                font-size: 14px;
+                transition: width 0.3s ease;
+            }
+        }
+        .username {
+            color: var(--white);
+            margin: 0 16px 0 32px;
+        }
     }
 }

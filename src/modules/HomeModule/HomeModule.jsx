@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Typography } from "@ui/Typography/Typography";
 import { Input } from "@ui/Input/Input";
 import styles from "./HomeModule.module.scss";
 import { Button } from "@ui/Button/Button";
 
-export const HomeModule = () => {
-    const [search, setSearch] = useState("");
-
+export const HomeModule = ({ search, setSearch }) => {
     const handleSearchChange = (e) => {
         setSearch(e.target.value);
     };

@@ -10,6 +10,7 @@ const truncateString = (str, length) => {
 
 export const Typography = ({
     variant,
+    color,
     weight,
     children,
     className,
