@@ -1,10 +1,11 @@
+import React from "react";
 import { Typography } from "@ui/Typography/Typography";
 import styles from "./Button.module.scss";
 
 export const Button = ({
     text,
     variant,
-    disabled,
+    disabled = false,
     onClick,
     children,
     color,

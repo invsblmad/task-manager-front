@@ -1,17 +1,14 @@
 import React from "react";
 import styles from "./WelcomeModule.module.scss";
 import { Typography } from "@ui/Typography/Typography";
-import { Button } from "@ui/Button/Button";
+import { Button } from "../../ui/Button/Button";
+import { useNavigate } from "react-router-dom";
+import { PATH } from "@utils/Constants/Constants";
 
 export const WelcomeModule = () => {
+    const navigate = useNavigate();
     return (
         <div className={styles.welcomeWrapper}>
-            <div className={styles.backgroundBalls}>
-                <div className={`${styles.ball} ${styles.ball1}`}></div>
-                <div className={`${styles.ball} ${styles.ball2}`}></div>
-            </div>
-            <div className={styles.backgroundTaskText}>TASK MANAGEMENT</div>
-
             <div className={styles.welcome}>
                 <div className={styles.textBlock}>
                     <Typography variant="h2" className={styles.welcomeText}>
@@ -22,11 +19,12 @@ export const WelcomeModule = () => {
                         начать работу с проектами.
                     </Typography>
                     <Button
-                        className={styles.startButton}
                         width="176px"
                         height="36px"
                         color="white"
                         variant="primary"
+                        className={styles.startButton}
+                        onClick={() => navigate(PATH.tasks)}
                         text="Начать Работу"
                     />
                 </div>
@@ -38,6 +36,7 @@ export const WelcomeModule = () => {
                     />
                 </div>
             </div>
+            <div className={styles.backgroundTaskText}>TASK MANAGEMENT</div>
         </div>
     );
 };

@@ -5,7 +5,6 @@ import styles from "./Layout.module.scss";
 
 export const Layout = () => {
     const location = useLocation();
-    const [menuOpen, setMenuOpen] = useState(true);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -13,14 +12,8 @@ export const Layout = () => {
 
     return (
         <div className={styles.appContainer}>
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <main
-                className={
-                    menuOpen ? styles.contentShifted : styles.contentFull
-                }
-            >
-                <Outlet />
-            </main>
+            <Menu />
+            <Outlet />
         </div>
     );
 };

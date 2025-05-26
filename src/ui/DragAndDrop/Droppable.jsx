@@ -9,11 +9,12 @@ export const Droppable = ({ id, children, taskCount }) => {
             ref={setNodeRef}
             style={{
                 minHeight: taskCount > 0 ? "auto" : "10vh",
-                margin: "1rem",
+                margin: "0 20px 20px 20px",
                 padding: "1rem",
                 backgroundColor: "var(--brand-primary)",
                 borderRadius: "8px",
-                minWidth: "24.5vw",
+                minWidth: "300px",
+                maxWidth: "300px",
             }}
         >
             {children}

@@ -1,0 +1,135 @@
+.taskDetailsContainer {
+    padding: 24px;
+    width: 800px;
+    .taskHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .companyLogo {
+            display: block;
+            width: 64px;
+            height: 64px;
+            border-radius: 12%;
+            object-fit: cover;
+            margin-right: 12px;
+        }
+    }
+    .issueKey {
+        font-size: 14px;
+        color: var(--state-info);
+    }
+    .taskTitle {
+        margin: 0;
+        color: var(--brand-primary);
+    }
+    .buttonRow {
+        margin-bottom: 24px;
+        .flexContent {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            line-height: 1;
+            svg {
+                display: block;
+            }
+        }
+        .btn {
+            border-radius: 4px;
+            margin-right: 12px;
+            padding-left: 6px;
+        }
+    }
+    .taskContent {
+        display: flex;
+        gap: 24px;
+        .taskMain {
+            flex: 2;
+            .detailTask {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 24px;
+                .typePriority {
+                    display: flex;
+                    width: 230px;
+                    justify-content: space-between;
+                    margin-bottom: 8px;
+                    .sectionTitleType {
+                        color: var(--grey-grey3);
+                    }
+                    .taskDescription {
+                        display: flex;
+                        gap: 4px;
+                        width: 80px;
+                    }
+                    .taskStatus {
+                        padding: 2px 6px;
+                        border-radius: 4px;
+                        color: var(--white);
+                        display: inline-block;
+                        font-weight: 600;
+                    }
+
+                    .statusReady {
+                        background-color: var(--state-success);
+                    }
+
+                    .statusInProgress {
+                        background-color: var(--state-warning);
+                        color: var(--black);
+                    }
+
+                    .statusToDo {
+                        background-color: var(--grey-grey3);
+                    }
+                }
+                &.closed {
+                    max-height: 0;
+                    opacity: 0;
+                }
+                &.open {
+                    max-height: 1000px;
+                    opacity: 1;
+                }
+            }
+            .sectionTitle {
+                margin-bottom: 16px;
+
+                .sectionTitleWrapper {
+                    position: relative;
+                    top: 3px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    background-color: var(--grey-grey5);
+                    padding: 0px;
+                    border-radius: 4px;
+                    margin-right: 6px;
+                    svg {
+                        position: relative;
+                        bottom: 0.1px;
+                    }
+                }
+            }
+        }
+        .taskSidebar {
+            flex: 1;
+            border-left: 1px solid var(--grey-grey5);
+            padding-left: 16px;
+            color: var(--grey-grey1);
+            font-size: 14px;
+            .sidebarSection {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.loading,
+.notFound {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+}

@@ -1,0 +1,101 @@
+.taskContent {
+    padding: 24px;
+    gap: 24px;
+    margin-top: 150px;
+    min-width: 300px;
+    .taskMain {
+        flex: 2;
+        margin-bottom: 60px;
+        .detailTask {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 24px;
+            &.closed {
+                max-height: 0;
+                opacity: 0;
+            }
+            &.open {
+                max-height: 1000px;
+                opacity: 1;
+            }
+        }
+        .sectionTitle {
+            margin-bottom: 16px;
+
+            .sectionTitleWrapper {
+                position: relative;
+                top: 3px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                background-color: var(--grey-grey5);
+                padding: 0px;
+                border-radius: 4px;
+                margin-right: 6px;
+                svg {
+                    position: relative;
+                    bottom: 0.1px;
+                }
+            }
+        }
+        .typePriority {
+            display: flex;
+            width: 230px;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            .taskDescription {
+                display: flex;
+                gap: 4px;
+                width: 80px;
+            }
+            .personInfo {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .avatar {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .timeStats {
+            .statCard {
+                display: flex;
+                justify-content: space-between;
+                max-width: 500px;
+                margin-bottom: 12px;
+                .barTask {
+                    display: flex;
+                    gap: 16px;
+                    .progressBar {
+                        display: flex;
+                        height: 14px;
+                        width: 100px;
+                        overflow: hidden;
+                        background-color: var(--grey-grey5);
+                        .spent {
+                            background-color: var(--state-purple);
+                            height: 100%;
+                        }
+                        .spentGrey {
+                            background-color: var(--grey-grey5);
+                            height: 100%;
+                        }
+
+                        .left {
+                            background-color: var(--state-success);
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.sectionTitleType {
+    color: var(--grey-grey3);
+}

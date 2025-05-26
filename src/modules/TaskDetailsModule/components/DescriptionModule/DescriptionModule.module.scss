@@ -1,0 +1,35 @@
+.taskContent {
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+    .taskMain {
+        flex: 2;
+        margin-right: 120px;
+    }
+    .sectionTitle {
+        margin-bottom: 16px;
+
+        .sectionTitleWrapper {
+            position: relative;
+            top: 3px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background-color: var(--grey-grey5);
+            padding: 0px;
+            border-radius: 4px;
+            margin-right: 6px;
+            svg {
+                position: relative;
+                bottom: 0.1px;
+            }
+        }
+    }
+}
+.taskDescriptionText {
+    margin-left: 24px;
+    .imageTaskDescription {
+        max-width: 500px;
+    }
+}

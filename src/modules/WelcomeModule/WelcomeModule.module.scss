@@ -2,63 +2,38 @@
     position: fixed;
     inset: 0;
     background: var(--vanil-white);
+
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    flex-direction: column;
     z-index: 0;
-    .backgroundBalls {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        pointer-events: none;
 
-        .ball {
-            position: absolute;
-            background-color: rgba(100, 149, 237, 0.15);
-            border-radius: 50%;
-            filter: blur(10px);
-            animation: moveBall 8s ease-in-out infinite;
-        }
-
-        .ball1 {
-            width: 180px;
-            height: 180px;
-            top: 80%;
-            left: 15%;
-            animation-delay: 0s;
-        }
-
-        .ball2 {
-            width: 180px;
-            height: 180px;
-            top: 60%;
-            left: 86%;
-            animation-delay: 0s;
-        }
-    }
     .backgroundTaskText {
-        position: absolute;
-        top: 75%;
-        left: 18%;
+        position: relative;
         transform: translate(-50%, -50%);
-        font-size: 7rem;
+        font-size: 6rem;
         font-weight: 900;
         color: var(--blue-blue1);
+        margin: 100px 0 0 180px;
         opacity: 0.03;
         user-select: none;
         pointer-events: none;
         animation: floatTask 6s ease-in-out infinite;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        white-space: nowrap;
+        text-align: center;
     }
     .welcome {
         position: relative;
-        background-color: #ffffff;
+        background-color: var(--white);
         padding: 40px 50px;
         border-radius: 20px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         max-width: 850px;
-        margin-left: 140px;
+        margin-left: 180px;
+        margin-top: 100px;
         width: 90%;
         display: flex;
         align-items: center;

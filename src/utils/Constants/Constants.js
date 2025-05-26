@@ -8,23 +8,59 @@ export const PATH = {
     notFound: "*",
     home: "/",
     login: "/login",
-    board: "/board",
+    tasks: "/tasks",
+    taskDetail: "/tasks/:id",
 };
 
 export const initialColumns = {
     todo: {
         title: "Нужно сделать",
         items: [
-            { id: "1", content: "Task 1" },
-            { id: "2", content: "Task 2" },
+            {
+                id: "1",
+                issueKey: "PRJ-1",
+                title: "Fix login bug and correct style from grey to bright Fix login bug and correct style from grey to bright Fix login bug and correct style from grey to bright",
+                content: "Fix login bug and correct style from grey to bright",
+                type: "bug",
+                priority: "high",
+                user: {
+                    name: "Eldana",
+                    avatar: "https://i.pravatar.cc/150?img=1",
+                },
+            },
+            {
+                id: "2",
+                issueKey: "PRJ-2",
+                title: "Design homepage",
+                content: "Design homepage",
+                type: "epic",
+                priority: "lowest",
+                user: {
+                    name: "Sam",
+                    avatar: "https://i.pravatar.cc/150?img=2",
+                },
+            },
         ],
     },
     inProgress: {
         title: "В процессе",
-        items: [{ id: "3", content: "Task 3" }],
+        items: [
+            {
+                id: "3",
+                issueKey: "PRJ-3",
+                title: "Create auth API",
+                content: "Create auth API",
+                type: "subtask",
+                priority: "low",
+                user: {
+                    name: "Lina",
+                    avatar: "https://i.pravatar.cc/150?img=3",
+                },
+            },
+        ],
     },
     done: {
-        title: "Готово",
+        title: "Выполнено",
         items: [],
     },
 };

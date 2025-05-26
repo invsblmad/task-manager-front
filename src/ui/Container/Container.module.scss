@@ -1,8 +1,9 @@
 @import "@Mixins";
 .container {
     gap: 24px;
-    // margin: 0 auto;
-    max-width: 1240px;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-left: 180px;
     @include Tablet {
         max-width: 708px;
     }

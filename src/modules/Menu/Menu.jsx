@@ -3,9 +3,10 @@ import { Typography } from "@ui/Typography/Typography";
 import { Button } from "@ui/Button/Button";
 import { FaHome, FaUsers, FaTasks, FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { PATH } from "@utils/Constants/Constants";
 import styles from "./Menu.module.scss";
 
-export const Menu = ({ menuOpen, setMenuOpen }) => {
+export const Menu = () => {
     const navigate = useNavigate();
     const [showProjects, setShowProjects] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
@@ -14,14 +15,8 @@ export const Menu = ({ menuOpen, setMenuOpen }) => {
     const handleCreateTask = () => {
         // логика создания задачи
     };
-
     const handleSearch = (value) => {
         // логика поиска
-    };
-
-    const goTo = (path) => {
-        navigate(path);
-        setMenuOpen(false);
     };
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -79,7 +74,6 @@ export const Menu = ({ menuOpen, setMenuOpen }) => {
                         )}
                     </div>
                 </div>
-
                 <div className={styles.rightSection}>
                     <Button
                         variant="primary"
@@ -120,36 +114,33 @@ export const Menu = ({ menuOpen, setMenuOpen }) => {
                     />
                 </div>
             </header>
-
             <aside className={styles.menuContainer}>
-                {menuOpen && (
-                    <nav className={styles.popupMenu}>
-                        <Button
-                            variant="text"
-                            className={styles.menuItem}
-                            onClick={() => goTo("/")}
-                        >
-                            <FaHome className={styles.icon} />
-                            Главная
-                        </Button>
-                        <Button
-                            variant="text"
-                            className={styles.menuItem}
-                            onClick={() => goTo("/team")}
-                        >
-                            <FaUsers className={styles.icon} />
-                            Моя команда
-                        </Button>
-                        <Button
-                            variant="text"
-                            className={styles.menuItem}
-                            onClick={() => goTo("/tasks")}
-                        >
-                            <FaTasks className={styles.icon} />
-                            Мои задачи
-                        </Button>
-                    </nav>
-                )}
+                <nav className={styles.popupMenu}>
+                    <Button
+                        variant="text"
+                        className={styles.menuItem}
+                        onClick={() => navigate(PATH.home)}
+                    >
+                        <FaHome className={styles.icon} />
+                        Главная
+                    </Button>
+                    <Button
+                        variant="text"
+                        className={styles.menuItem}
+                        onClick={() => navigate(PATH.team)}
+                    >
+                        <FaUsers className={styles.icon} />
+                        Моя команда
+                    </Button>
+                    <Button
+                        variant="text"
+                        className={styles.menuItem}
+                        onClick={() => navigate(PATH.tasks)}
+                    >
+                        <FaTasks className={styles.icon} />
+                        Мои задачи
+                    </Button>
+                </nav>
             </aside>
         </div>
     );
