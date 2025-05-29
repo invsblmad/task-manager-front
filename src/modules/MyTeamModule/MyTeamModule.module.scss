@@ -1,0 +1,68 @@
+.myTeamContainer {
+    padding-top: 2rem;
+    max-width: 1100px;
+    .controls {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+        max-width: 400px;
+        .selectTeam {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid var(--grey-grey4);
+        }
+    }
+    .table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .table th,
+    .table td {
+        border-bottom: 1px solid var(--grey-grey4);
+        padding: 8px;
+        text-align: center;
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .removeButton {
+            background-color: var(--state-error);
+        }
+    }
+    .modalOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        .modal {
+            background-color: var(--white);
+            border-radius: 12px;
+            width: 450px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            .addUsersToTeam {
+                text-align: center;
+            }
+            .modalButtons {
+                display: flex;
+                gap: 30px;
+                .cancelBtn {
+                    background-color: var(--grey-grey4);
+                }
+            }
+        }
+    }
+}

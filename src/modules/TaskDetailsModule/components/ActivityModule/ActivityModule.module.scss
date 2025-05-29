@@ -73,6 +73,9 @@
                                     color: var(--grey-grey3);
                                 }
                             }
+                            .logTextDescription {
+                                margin: 4px 0 16px;
+                            }
                         }
                     }
 
@@ -95,6 +98,15 @@
                         padding-bottom: 14px;
                         border-bottom: 1px solid transparent;
                         border-color: var(--grey-grey4);
+                        ul,
+                        ol {
+                            margin: 0;
+                            padding-left: 1.2em;
+                        }
+
+                        li {
+                            margin: 0.3em 0;
+                        }
                     }
                 }
             }

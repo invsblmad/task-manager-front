@@ -8,6 +8,7 @@ import { ProtectedRoute } from "@components/ProtectedRoute";
 import { TaskPage } from "@pages/TaskPage/TaskPage";
 import { TaskDetailPage } from "@pages/TaskDetailPage/TaskDetailPage";
 import { initialColumns } from "@utils/Constants/Constants";
+import { MyTeamPage } from "@pages/MyTeamPage/MyTeamPage";
 
 export const AppRouter = () => {
     const [tasks, setTasks] = useState(initialColumns);
@@ -46,6 +47,16 @@ export const AppRouter = () => {
                                     setTasks={setTasks}
                                 />
                             ),
+                        },
+                    ],
+                },
+                {
+                    path: PATH.team,
+                    element: <Layout />,
+                    children: [
+                        {
+                            index: true,
+                            element: <MyTeamPage />,
                         },
                     ],
                 },

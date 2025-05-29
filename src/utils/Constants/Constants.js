@@ -10,6 +10,7 @@ export const PATH = {
     login: "/login",
     tasks: "/tasks",
     taskDetail: "/tasks/:id",
+    team: "/team",
 };
 
 export const initialColumns = {

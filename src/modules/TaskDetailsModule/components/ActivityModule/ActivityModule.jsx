@@ -239,7 +239,9 @@ export const ActivityModule = () => {
                                                 </div>
                                                 <Typography
                                                     variant="h6"
-                                                    className={style.logText2}
+                                                    className={
+                                                        style.logTextDescription
+                                                    }
                                                 >
                                                     {log.description}
                                                 </Typography>

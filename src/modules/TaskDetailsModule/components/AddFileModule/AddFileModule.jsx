@@ -115,12 +115,7 @@ export const AddFileModule = () => {
                                     {sortedFiles.length > 0 && (
                                         <ul className={style.fileList}>
                                             {sortedFiles.map(
-                                                ({
-                                                    id,
-                                                    name,
-                                                    url,
-                                                    isPinned,
-                                                }) => (
+                                                ({ id, name, url }) => (
                                                     <li
                                                         key={id}
                                                         className={

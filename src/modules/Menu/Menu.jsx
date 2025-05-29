@@ -5,19 +5,22 @@ import { FaHome, FaUsers, FaTasks, FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { PATH } from "@utils/Constants/Constants";
 import styles from "./Menu.module.scss";
+import { CreateTaskModule } from "@modules/CreateTaskModule/CreateTaskModule";
 
 export const Menu = () => {
     const navigate = useNavigate();
     const [showProjects, setShowProjects] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
     const searchRef = useRef(null);
+    const [showCreateTaskModal, setShowCreateTaskModal] = useState(false);
 
     const handleCreateTask = () => {
-        // логика создания задачи
+        setShowCreateTaskModal(true);
     };
-    const handleSearch = (value) => {
-        // логика поиска
+    const closeModal = () => {
+        setShowCreateTaskModal(false);
     };
+    const handleSearch = (value) => {};
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -142,6 +145,7 @@ export const Menu = () => {
                     </Button>
                 </nav>
             </aside>
+            {showCreateTaskModal && <CreateTaskModule onClose={closeModal} />}
         </div>
     );
 };
