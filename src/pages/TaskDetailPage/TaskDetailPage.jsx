@@ -6,6 +6,9 @@ import { Container } from "@ui/Container/Container";
 import { DescriptionModule } from "@modules/TaskDetailsModule/components/DescriptionModule/DescriptionModule";
 import styles from "./TaskDetailPage.module.scss";
 import { PeopleDataTimeModule } from "@modules/TaskDetailsModule/components/PeopleDataTimeModule/PeopleDataTimeModule";
+import { AddFileModule } from "@modules/TaskDetailsModule/components/AddFileModule/AddFileModule";
+import { SubtasksModule } from "@modules/TaskDetailsModule/components/SubtasksModule/SubtasksModule";
+import { ActivityModule } from "@modules/TaskDetailsModule/components/ActivityModule/ActivityModule";
 
 export const TaskDetailPage = () => {
     const { taskId } = useParams();
@@ -24,6 +27,9 @@ export const TaskDetailPage = () => {
                 </div>
                 <PeopleDataTimeModule />
             </div>
+            <AddFileModule />
+            <SubtasksModule />
+            <ActivityModule />
         </Container>
     );
 };

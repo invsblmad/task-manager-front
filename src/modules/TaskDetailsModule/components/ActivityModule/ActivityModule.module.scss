@@ -1,0 +1,128 @@
+.taskDetailsContainer {
+    padding: 24px;
+    .taskContent {
+        display: flex;
+        gap: 24px;
+        .taskMain {
+            flex: 2;
+
+            .sectionTitle {
+                margin-bottom: 16px;
+
+                .sectionTitleWrapper {
+                    position: relative;
+                    top: 3px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    background-color: var(--grey-grey5);
+                    padding: 0px;
+                    border-radius: 4px;
+                    margin-right: 6px;
+                    svg {
+                        position: relative;
+                        bottom: 0.1px;
+                    }
+                }
+            }
+            .activityBlock {
+                margin-left: 24px;
+                .tabs {
+                    display: flex;
+                    gap: 12px;
+                    margin-top: 16px;
+
+                    .tabButton {
+                        font-weight: 600;
+                        font-size: 16px;
+                        padding: 6px 12px;
+                        color: var(--grey-grey3);
+                        border-bottom: 3px solid transparent;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            color: var(--black);
+                        }
+                    }
+                    .active {
+                        color: var(--state-info);
+                        border-color: var(--state-info);
+                    }
+                }
+
+                .tabContent {
+                    margin-top: 34px;
+                    .logSection {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        .logEntry {
+                            font-weight: 600;
+                            font-size: 16px;
+                            border-bottom: 1px solid transparent;
+                            border-color: var(--grey-grey4);
+                            transition: all 0.3s ease;
+                            .divTimeSpend {
+                                display: flex;
+                                gap: 12px;
+                                .logText1,
+                                .logText2 {
+                                    margin: 4px 0 16px;
+                                }
+                                .logText1 {
+                                    color: var(--grey-grey3);
+                                }
+                            }
+                        }
+                    }
+
+                    .commentAuthor {
+                        display: flex;
+                        gap: 10px;
+                        color: var(--state-info);
+                        .commentDate {
+                            color: var(--grey-grey2);
+                        }
+                        .avatar {
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+                    .commentText {
+                        margin: 12px 0 36px;
+                        padding-bottom: 14px;
+                        border-bottom: 1px solid transparent;
+                        border-color: var(--grey-grey4);
+                    }
+                }
+            }
+            .commentEditor {
+                margin-top: 20px;
+                border: 1px solid var(--grey-grey4);
+                border-radius: 8px;
+                padding: 16px;
+
+                .editorButtons {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: flex-end;
+                    margin-top: 12px;
+
+                    button {
+                        min-width: 100px;
+                    }
+                }
+            }
+            .commentsBtn {
+                background-color: var(--grey-grey4);
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                font-size: 16px;
+                margin-top: 16px;
+            }
+        }
+    }
+}

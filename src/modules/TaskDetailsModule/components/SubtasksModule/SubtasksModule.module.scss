@@ -1,0 +1,81 @@
+.taskDetailsContainer {
+    padding: 24px;
+    .taskContent {
+        display: flex;
+        gap: 24px;
+        .taskMain {
+            flex: 2;
+            .wrapperSubtasksTitle {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .sectionTitle {
+                margin-bottom: 16px;
+
+                .sectionTitleWrapper {
+                    position: relative;
+                    top: 3px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    background-color: var(--grey-grey5);
+                    padding: 0px;
+                    border-radius: 4px;
+                    margin-right: 6px;
+                    svg {
+                        position: relative;
+                        bottom: 0.1px;
+                    }
+                }
+            }
+            .plusBtn {
+                font-size: 22px;
+            }
+        }
+    }
+}
+.subtasksWrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 24px;
+    .subtaskItem {
+        display: grid;
+        grid-template-columns: 100px repeat(3, 318px);
+        padding: 8px;
+        border-bottom: 1px solid var(--grey-grey4);
+        .id {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .name {
+            max-width: 250px;
+        }
+    }
+    .progressBarWrapper {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .progressBar {
+            flex-grow: 1;
+            height: 8px;
+            background: var(--grey-grey5);
+            border-radius: 4px;
+            overflow: hidden;
+            .progress {
+                height: 100%;
+                background: var(--state-info, var(--state-info));
+                transition: width 0.3s ease;
+            }
+        }
+        .progressText {
+            font-size: 12px;
+            min-width: 32px;
+        }
+    }
+}
